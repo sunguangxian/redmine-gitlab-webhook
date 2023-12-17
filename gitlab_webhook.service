@@ -1,0 +1,13 @@
+[Unit]
+Description=GitLab Webhook Flask App
+After=network.target
+
+[Service]
+ExecStart=/home/user/flask_app/venv/bin/python /home/user/flask_app/gitlab_webhook.py
+WorkingDirectory=/home/user/flask_app
+Restart=always
+User=user
+
+[Install]
+WantedBy=multi-user.target
+
